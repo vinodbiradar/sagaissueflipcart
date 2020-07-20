@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { signUp } from "../../Actions/auth";
+import { signUp } from "../../Store/Actions/auth";
 import { Link } from "react-router-dom";
 
 const SignUp = (props) => {
@@ -10,6 +10,10 @@ const SignUp = (props) => {
 
   function registerUser() {
     props.signUp(name, email, password);
+  }
+
+  if (props.signUpSuccess === true) {
+    props.history.push("./login");
   }
   return (
     <div className="row">

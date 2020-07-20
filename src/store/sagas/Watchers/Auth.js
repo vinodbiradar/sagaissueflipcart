@@ -8,7 +8,7 @@ import {
   signUpError,
   signUpLoading,
 } from "../../Actions/auth";
-import Firebase from "../../firebase/Firebase";
+import Firebase from "../../../Firebase/Firebase";
 
 //Sign-in Sagas
 function* signIn(actions) {

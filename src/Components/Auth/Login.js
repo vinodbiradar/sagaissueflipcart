@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { signIn } from "../../Actions/auth";
+import { signIn } from "../../Store/Actions/auth";
 
 const SignIn = (props) => {
   const [email, setEmail] = useState("");
@@ -15,6 +15,10 @@ const SignIn = (props) => {
   useEffect(() => {
     setSignIn(props.signInSuccess);
   }, [props.signInSuccess]);
+
+  if (props.signInSuccess === true) {
+    props.history.push("./dashboard");
+  }
 
   return (
     <div className="row">

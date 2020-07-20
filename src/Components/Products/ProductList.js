@@ -26,12 +26,6 @@ export class ProductList extends Component {
           <div className="col-md-2 product">
             <img className="product-list" src={p5} />
           </div>
-          <div className="col-md-2 product">
-            <img className="product-list" src={p4} />
-          </div>
-          <div className="col-md-2 product">
-            <img className="product-list" src={p5} />
-          </div>
         </div>
       </div>
     );

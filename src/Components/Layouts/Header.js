@@ -2,9 +2,6 @@ import React from "react";
 import "./Header.css";
 import logoImage from "./../../Assets/flipkart-logo.png";
 import { Link } from "react-router-dom";
-import Add from "../Adds/Add";
-import Product from "../Products/Product";
-import ProductList from "../Products/ProductList";
 
 const Header = () => {
   return (
@@ -65,9 +62,6 @@ const Header = () => {
           </form>
         </div>
       </nav>
-      <Add />
-      <Product />
-      <ProductList />
     </>
   );
 };
