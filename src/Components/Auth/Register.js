@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
-import { signUp } from "../../Store/Actions/auth";
-import { Link } from "react-router-dom";
+import React, { useState } from "./node_modules/react";
+import { connect } from "./node_modules/react-redux";
+import { signUp } from "../../store/Actions/auth";
 
 const SignUp = (props) => {
   const [name, setName] = useState("");

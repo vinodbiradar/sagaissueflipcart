@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { signIn } from "../../Store/Actions/auth";
+import React, { useState, useEffect } from "./node_modules/react";
+import { Link } from "./node_modules/react-router-dom";
+import { connect } from "./node_modules/react-redux";
+import { signIn } from "../../store/Actions/auth";
 
 const SignIn = (props) => {
   const [email, setEmail] = useState("");

@@ -1,7 +1,7 @@
-import React from "react";
-import Add from "../Adds/Add";
-import Product from "../Products/Product";
-import ProductList from "../Products/ProductList";
+import React from "./node_modules/react";
+import Add from "../adds";
+import Product from "../products/Product";
+import ProductList from "../products/ProductList";
 
 function Home() {
   return (

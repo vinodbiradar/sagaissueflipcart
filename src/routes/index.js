@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Login from "../Components/Auth/Login";
-import Register from "../Components/Auth/Register";
-import More from "../Components/More/More";
-import Cart from "../Components/Cart/Cart";
-import Home from "../Components/Layouts/Home";
-import Dashboard from "../Components/Layouts/Dashboard";
+import Login from "../components/auth/Login";
+import Register from "../components/auth/Register";
+import More from "../components/more";
+import Cart from "../components/cart";
+import Home from "../components/layouts/Home";
+import Dashboard from "../components/layouts/Dashboard";
 
 const routes = [
   {

@@ -1,4 +1,4 @@
-import { put, takeLatest, call, all, delay } from "redux-saga/effects";
+import { put, takeLatest, call, all, delay } from "./node_modules/redux-saga/effects";
 import { SIGNIN, SIGNUP } from "../../Actions/constantType";
 import {
   signInSuccess,
@@ -8,7 +8,7 @@ import {
   signUpError,
   signUpLoading,
 } from "../../Actions/auth";
-import Firebase from "../../../Firebase/Firebase";
+import Firebase from "../../../firebase/Firebase";
 
 //Sign-in Sagas
 function* signIn(actions) {

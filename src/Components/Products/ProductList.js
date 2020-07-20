@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 import "./Product.css";
 import p1 from "./../../Assets/p1.png";
 import p2 from "./../../Assets/p2.png";

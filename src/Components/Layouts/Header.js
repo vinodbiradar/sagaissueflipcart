@@ -1,7 +1,7 @@
-import React from "react";
+import React from "./node_modules/react";
 import "./Header.css";
 import logoImage from "./../../Assets/flipkart-logo.png";
-import { Link } from "react-router-dom";
+import { Link } from "./node_modules/react-router-dom";
 
 const Header = () => {
   return (
