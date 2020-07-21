@@ -1,6 +1,6 @@
-import React, { useState } from "./node_modules/react";
-import { connect } from "./node_modules/react-redux";
-import { signUp } from "../../store/Actions/auth";
+import React, { useState } from "react";
+import { connect } from "react-redux";
+import { signUp } from "../../store/Actions/auth.action";
 
 const SignUp = (props) => {
   const [name, setName] = useState("");

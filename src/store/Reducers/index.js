@@ -1,4 +1,5 @@
-import { combineReducers } from "./node_modules/redux";
-import authReducer from "./auth";
+import { combineReducers } from "redux";
+import authReducer from "./auth.reducer";
+import productReducer from "./product.reducer";
 
-export default combineReducers({ authReducer });
+export default combineReducers({ authReducer, productReducer });

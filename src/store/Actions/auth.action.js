@@ -8,6 +8,9 @@ import {
   SIGNUPLOADING,
   SIGNUPSUCCESS,
   SIGNUPERROR,
+  FETCH_PRODUCTS_REQUEST,
+  FETCH_PRODUCTS_SUCCESS,
+  FETCH_PRODUCTS_FAILURE,
 } from "./constantType";
 
 // Sign-in actions
@@ -33,7 +36,6 @@ const clearSignInState = () => {
 };
 
 // Sign-up actions
-
 const signUp = (name, email, password) => {
   return { type: SIGNUP, payload: { name, email, password } };
 };
@@ -50,6 +52,19 @@ const signUpLoading = () => {
   return { type: SIGNUPLOADING };
 };
 
+// Product actions
+const fetchProducts = () => {
+  return { type: FETCH_PRODUCTS_REQUEST };
+};
+
+const productSuccess = () => {
+  return { type: FETCH_PRODUCTS_SUCCESS };
+};
+
+const productError = (message) => {
+  return { type: FETCH_PRODUCTS_FAILURE, message };
+};
+
 export {
   signIn,
   signInSuccess,
@@ -59,4 +74,7 @@ export {
   signUpSuccess,
   signUpError,
   signUpLoading,
+  fetchProducts,
+  productSuccess,
+  productError,
 };

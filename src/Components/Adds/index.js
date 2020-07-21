@@ -1,7 +1,7 @@
-import React from "./node_modules/react";
-import adv5 from "./../../Assets/adv5.png";
-import adv6 from "./../../Assets/adv6.png";
-import adv7 from "./../../Assets/adv7.png";
+import React from "react";
+import adv5 from "./../../assets/adv5.png";
+import adv6 from "./../../assets/adv6.png";
+import adv7 from "./../../assets/adv7.png";
 
 const Add = () => {
   return (

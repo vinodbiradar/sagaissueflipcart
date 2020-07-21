@@ -1,5 +1,9 @@
-import { put, takeLatest, call, all, delay } from "./node_modules/redux-saga/effects";
-import { SIGNIN, SIGNUP } from "../../Actions/constantType";
+import { put, takeLatest, all, take } from "redux-saga/effects";
+import {
+  SIGNIN,
+  SIGNUP,
+  FETCH_PRODUCTS_REQUEST,
+} from "../../Actions/constantType";
 import {
   signInSuccess,
   signInError,
@@ -7,7 +11,14 @@ import {
   signUpSuccess,
   signUpError,
   signUpLoading,
-} from "../../Actions/auth";
+  fetchingProduct,
+  productFetchRequest,
+  productSuccess,
+  productError,
+} from "../../Actions/auth.action";
+import { app } from "firebase/app";
+import { eventChannel } from "redux-saga";
+
 import Firebase from "../../../firebase/Firebase";
 
 //Sign-in Sagas
@@ -41,6 +52,25 @@ function* signUp(actions) {
   }
 }
 
+//Product Sagas
+function* fetchingProducts() {
+  const ref = app.firestore().collection("products");
+  const channel = eventChannel((emit) => ref.onSnapshot(emit));
+
+  try {
+    while (true) {
+      const data = yield take(channel);
+      yield put(productSuccess(data));
+    }
+  } catch (err) {
+    yield put(productError(err));
+  }
+}
+
 export default function* watchSignInSaga() {
-  yield all([takeLatest(SIGNIN, signIn), takeLatest(SIGNUP, signUp)]);
+  yield all([
+    takeLatest(SIGNIN, signIn),
+    takeLatest(SIGNUP, signUp),
+    takeLatest(FETCH_PRODUCTS_REQUEST, fetchingProducts),
+  ]);
 }

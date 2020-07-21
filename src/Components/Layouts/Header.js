@@ -1,12 +1,11 @@
-import React from "./node_modules/react";
+import React from "react";
 import "./Header.css";
-import logoImage from "./../../Assets/flipkart-logo.png";
-import { Link } from "./node_modules/react-router-dom";
+import logoImage from "./../../assets/flipkart-logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
-      <products />
       <nav className="navbar navbar-expand-lg navbar-light bg-primary">
         <Link to="/" className="navbar-brand" href="#">
           <img className="logo" src={logoImage} />

@@ -3,7 +3,6 @@ import "firebase/auth";
 
 class Firebase {
   constructor() {
-    // app.initializeApp(config);
     this.auth = app.auth();
     console.log(this.auth);
   }
